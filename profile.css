@@ -1,0 +1,185 @@
+/* ===== プロフィールページ ===== */
+.profile-main {
+  padding: var(--section-py) 0;
+  background: var(--white);
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+/* 写真エリア */
+.profile-photo-frame {
+  width: 100%;
+  aspect-ratio: 3/4;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--beige-200);
+  margin-bottom: 20px;
+}
+.profile-photo-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-soft);
+  font-size: 14px;
+  letter-spacing: 0.05em;
+}
+
+.profile-name-card {
+  text-align: center;
+}
+.profile-role {
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  color: var(--text-soft);
+  margin-bottom: 6px;
+}
+.profile-name {
+  font-family: var(--font-serif);
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--brown-800);
+  margin-bottom: 12px;
+}
+.profile-name-en {
+  display: block;
+  font-family: var(--font-en);
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--text-soft);
+  letter-spacing: 0.1em;
+  margin-top: 4px;
+}
+
+.sns-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--text-mid);
+  border: 1px solid var(--beige-200);
+  border-radius: 40px;
+  padding: 6px 16px;
+  transition: border-color 0.2s, color 0.2s;
+}
+.sns-link:hover {
+  border-color: var(--brown-400);
+  color: var(--brown-600);
+}
+
+/* メッセージ引用 */
+.profile-message {
+  margin-bottom: 28px;
+}
+.profile-message-en {
+  font-family: var(--font-en);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  color: var(--green-600);
+  margin-bottom: 8px;
+}
+.profile-message blockquote {
+  font-family: var(--font-serif);
+  font-size: clamp(16px, 2.5vw, 20px);
+  font-weight: 400;
+  color: var(--brown-800);
+  line-height: 1.7;
+  padding-left: 20px;
+  border-left: 3px solid var(--green-400);
+}
+
+/* 経歴 */
+.profile-career {
+  margin-top: 36px;
+  padding-top: 32px;
+  border-top: 1px solid var(--beige-200);
+}
+.career-title {
+  font-family: var(--font-serif);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--brown-800);
+  margin-bottom: 16px;
+}
+.career-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.career-list li {
+  display: flex;
+  gap: 20px;
+  align-items: baseline;
+}
+.career-year {
+  flex-shrink: 0;
+  font-family: var(--font-en);
+  font-size: 15px;
+  color: var(--green-600);
+  letter-spacing: 0.05em;
+}
+.career-text {
+  font-size: 14px;
+  color: var(--text-mid);
+  line-height: 1.6;
+}
+
+/* ===== こだわり ===== */
+.commitment {
+  padding: var(--section-py) 0;
+  background: var(--beige-100);
+}
+.commitment-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.commitment-item {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 32px 24px;
+  border: 1px solid var(--beige-200);
+}
+.commitment-num {
+  font-family: var(--font-en);
+  font-size: 36px;
+  font-weight: 300;
+  color: var(--beige-300);
+  line-height: 1;
+  margin-bottom: 12px;
+}
+.commitment-item h3 {
+  font-family: var(--font-serif);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--brown-800);
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+.commitment-item p {
+  font-size: 13px;
+  color: var(--text-mid);
+  line-height: 1.8;
+}
+
+/* ===== レスポンシブ ===== */
+@media (max-width: 768px) {
+  .profile-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .profile-photo-frame {
+    max-width: 280px;
+    margin: 0 auto 20px;
+  }
+  .commitment-grid {
+    grid-template-columns: 1fr;
+  }
+}
